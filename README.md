@@ -15,7 +15,7 @@ As mentioned in the paper, since we use up to the first 500 data points for each
 
 We use the Sachs dataset, and we provide both its ground-truth DAG and the corresponding data.
 
-We recommend using CAM pruning due to its high computational efficiency. It is worth noting that the pruning method essentially functions as a replaceable module, allowing users to choose the most suitable pruning technique according to the requirements of different datasets or application scenarios.
+We recommend using CAM pruning due to its high computational efficiency. However, for the Sachs dataset, the best results were achieved using KCI pruning with $\sigma_1 = 0.8$ and $\sigma_2 = 0.4$, and this finding was consistent across both the GCD_star and GCD models.
 
 ### Required Softwares
 
