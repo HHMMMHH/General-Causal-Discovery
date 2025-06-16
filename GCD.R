@@ -21,6 +21,9 @@ tilde <- function(K) {
 }
 
 ##### GCD_star and GCD represent the deflation and no-deflation versions of the code, respectively.
+##### For bivariate experiments, please standardize the data using `scale()`.
+##### For multivariate experiments, however, we do not recommend applying `scale()` for global standardization, 
+##### as this process may distort the true proportional relationships among variables, potentially affecting the identification of causal structures or related statistical inferences.
 GCD_star <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
   n  <- nrow(data)
   d  <- ncol(data)
