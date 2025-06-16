@@ -21,7 +21,7 @@ tilde <- function(K) {
 }
 
 ##### GCD_star and GCD represent the deflation and no-deflation versions of the code, respectively.
-GCD_star <- function(data, sigma1, sigma2, lambda = 0.01) {
+GCD_star <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
   n  <- nrow(data)
   d  <- ncol(data)
   causal_order <- integer(0)
@@ -76,7 +76,7 @@ GCD_star <- function(data, sigma1, sigma2, lambda = 0.01) {
   causal_order
 }
 
-GCD <- function(data, sigma1, sigma2, lambda = 0.01) {
+GCD <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
   n  <- nrow(data)
   d  <- ncol(data)
   causal_order <- integer(0)
