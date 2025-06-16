@@ -21,7 +21,6 @@ tilde <- function(K) {
 }
 
 ##### GCD_star and GCD represent the deflation and no-deflation versions of the code, respectively.
-
 GCD_star <- function(data, sigma1, sigma2, lambda = 0.01) {
   n  <- nrow(data)
   d  <- ncol(data)
