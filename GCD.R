@@ -28,7 +28,11 @@ GCD_star <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
   n  <- nrow(data)
   d  <- ncol(data)
   causal_order <- integer(0)
-  current_data <- as.matrix(data)
+  if (d == 2) {
+    current_data <- scale(as.matrix(data))
+  } else {
+    current_data <- as.matrix(data)
+  }
   S <- seq_len(d)
   
   while (length(S) > 0) {
@@ -82,6 +86,9 @@ GCD_star <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
 GCD <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
   n  <- nrow(data)
   d  <- ncol(data)
+  if (d == 2) {
+    data <- scale(as.matrix(data))
+  }
   causal_order <- integer(0)
   S <- seq_len(d)
   
@@ -125,3 +132,4 @@ GCD <- function(data, sigma1 = 0.4, sigma2 = 0.2, lambda = 0.01) {
   
   causal_order
 }
+
